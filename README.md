@@ -26,8 +26,10 @@ This repository contains the code and data pipeline used in the paper *"Machine-
   - [Workflow](#workflow)
   - [Output Files](#output-files)
   - [Reproducibility](#reproducibility)
-  - [Citation](#citation)
   - [License](#license)
+    - [Code](#code)
+    - [Data](#data)
+  - [Citation](#citation)
 
 ---
 
@@ -35,7 +37,7 @@ This repository contains the code and data pipeline used in the paper *"Machine-
 
 Phytosociological classification assigns vegetation plots (relevés) to hierarchical syntaxonomic units based on their floristic composition. This process is traditionally performed by expert botanists through manual comparison with reference descriptions. In this work, we explore the use of supervised machine learning to automate the assignment of Pyrenean vegetation relevés to phytosociological alliances.
 
-Each relevé is represented as a numerical vector encoding the abundance of ~5,000 plant species. Three classification models are trained and evaluated:
+Each relevé is represented as a numerical vector encoding the abundance of 3,700 plant species. Three classification models are trained and evaluated:
 
 | Model | Description |
 |-------|-------------|
@@ -96,7 +98,7 @@ The file `sp_index_dic.txt` maps each species identifier to its position in the 
 
 ### Class Filtering
 
-To ensure meaningful classification, only alliances represented by at least **20–21 relevés** in the dataset are retained for training. This threshold balances having sufficient training examples per class against maintaining broad taxonomic coverage.
+To ensure meaningful classification, only alliances represented by at least **20 relevés** in the dataset are retained for training. This threshold balances having sufficient training examples per class against maintaining broad taxonomic coverage.
 
 ---
 
@@ -151,8 +153,7 @@ The MLP notebook includes an additional step where an autoencoder compresses the
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/rauletepawa/MLP_botanics.git
-   cd MLP_botanics/Xavier/pirineus_local/Publicar/Scripts
+      gh repo clone rauletepawa/pyrenean-vegetation-ml-alliance-assignment
    ```
 
 2. Create a virtual environment (recommended):
@@ -254,6 +255,42 @@ Each training notebook produces:
 
 ---
 
+## License
+
+### Code
+The scripts and notebooks in this repository are released under the **MIT License**.
+
+```
+MIT License
+
+Copyright (c) 2026 Raúl Pérez, Gwendolyn Peyre, Xavier Font
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
+
+### Data
+The datasets provided in this repository are released under the **Creative Commons Attribution 4.0 International License (CC BY 4.0)**.
+
+You are free to share and adapt the data for any purpose, provided appropriate credit is given to the original authors. See [https://creativecommons.org/licenses/by/4.0/](https://creativecommons.org/licenses/by/4.0/) for full terms.
+
+---
+
 ## Citation
 
 If you use this code or methodology in your work, please cite:
@@ -267,8 +304,4 @@ If you use this code or methodology in your work, please cite:
 }
 ```
 
----
 
-## License
-
-This project is provided for academic and research purposes. Please contact the authors for usage permissions beyond personal research.
