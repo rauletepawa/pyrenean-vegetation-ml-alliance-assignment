@@ -29,7 +29,6 @@ This repository contains the code and data pipeline used in the paper *"Machine-
   - [License](#license)
     - [Code](#code)
     - [Data](#data)
-  - [Citation](#citation)
 
 ---
 
@@ -290,17 +289,6 @@ You are free to share and adapt the data for any purpose, provided appropriate c
 
 ---
 
-## Citation
 
-If you use this code or methodology in your work, please cite:
-
-```
-@article{,
-  title={Machine-learning assignment of Pyrenean vegetation to phytosociological alliances},
-  author={Raúl Pérez, Gwendolyn Peyre, Xavier Font},
-  journal={Journal of Vegetation Science},
-  year={2026}
-}
-```
 
 
