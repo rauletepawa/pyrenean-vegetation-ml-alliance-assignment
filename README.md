@@ -52,24 +52,23 @@ All models use **Optuna** for Bayesian hyperparameter optimization with 5-fold s
 ## Repository Structure
 
 ```
-scripts/
-├── requirements.txt                        # Python dependencies
-├── releve_vectorizer.ipynb                 # Data preparation: raw relevés → feature vectors
-├── LightGBM_pirineus.ipynb                 # LightGBM training and evaluation
-├── XGBoost_Pirineus.ipynb                  # XGBoost training and evaluation
-├── Multilayer_Perceptron_pirineus.ipynb     # MLP training and evaluation
-├── Matriu_de_dades/                        # Input data directory
-│   ├── output_pirineus_3_corrected.txt     # Vectorized relevés with alliance labels (training data)
-│   ├── releves_sense_alianca_vectors.txt   # Unlabeled relevés for inference
-│   ├── sp_index_dic.txt                    # Species-to-index mapping dictionary
-│   └── label_encoder.pkl                   # Fitted label encoder for class mapping
-├── matriu_dades/                            # Alternative data path (used by some notebooks)
-└── models/                                 # Saved trained models
-    ├── lgb_final_model.pkl                 # Final LightGBM model
-    ├── xgb_final_model.pkl                 # Final XGBoost model
-    ├── mlp_final_model.h5                  # Final MLP model
-    ├── encoder.h5                          # Trained autoencoder (encoder part)
-    └── autoencoder.h5                      # Full autoencoder model
+pyrenean-vegetation-ml-alliance-assignment/
+├── scripts/
+│   ├── requirements.txt                         # Python dependencies
+│   ├── releve_vectorizer.ipynb                  # Data preparation: raw relevés → feature vectors
+│   ├── LightGBM_pirineus.ipynb                  # LightGBM training and evaluation
+│   ├── XGBoost_Pirineus.ipynb                   # XGBoost training and evaluation
+│   └── Multilayer_Perceptron_pirineus.ipynb     # MLP training and evaluation
+├── training_images/
+│   ├── learning_curves_xgbost_reduced.png
+│   ├── lgbm_training_best_params_reduced.jpg
+│   ├── lgbm_training_best_params_sparse.png
+│   ├── mlp_sparse_train.png
+│   ├── mlp_train_best_params_reduced_03_29_09_2024.jpg
+│   └── xgboost_sparse_learning_curves.png
+├── .gitignore
+├── README.md
+└── data.zip                                     # Input data archive
 ```
 
 ---
