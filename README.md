@@ -52,7 +52,7 @@ All models use **Optuna** for Bayesian hyperparameter optimization with 5-fold s
 ## Repository Structure
 
 ```
-Scripts/
+scripts/
 ├── requirements.txt                        # Python dependencies
 ├── releve_vectorizer.ipynb                 # Data preparation: raw relevés → feature vectors
 ├── LightGBM_pirineus.ipynb                 # LightGBM training and evaluation
