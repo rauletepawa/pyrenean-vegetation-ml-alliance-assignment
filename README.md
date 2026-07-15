@@ -88,7 +88,7 @@ The primary input file (`output_pirineus_3_corrected.txt`) is a JSON dictionary 
 
 - **Key**: Unique relevé identifier (e.g., `"P-P00123"`)
 - **Value**: A list containing:
-  - A numerical vector of length ~5,000 representing species abundances (values 0–9, following the Braun-Blanquet abundance-dominance scale transformed to ordinal values)
+  - A numerical vector of length 3,700 representing species abundances (values 0–9, following the Braun-Blanquet abundance-dominance scale transformed to ordinal values)
   - The assigned phytosociological alliance label (e.g., `["L345"]`)
 
 ### Species Index Dictionary
@@ -128,7 +128,7 @@ All three training notebooks follow a consistent pipeline:
 
 ### MLP-Specific: Autoencoder Dimensionality Reduction
 
-The MLP notebook includes an additional step where an autoencoder compresses the ~5,000-dimensional input into a 500-dimensional representation before classification. This helps the neural network learn more efficiently from the sparse, high-dimensional input.
+The MLP notebook includes an additional step where an autoencoder compresses the 3,700-dimensional input into a 500-dimensional representation before classification. This helps the neural network learn more efficiently from the sparse, high-dimensional input.
 
 ### Hyperparameter Spaces
 
