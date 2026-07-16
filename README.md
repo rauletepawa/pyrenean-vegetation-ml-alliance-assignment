@@ -36,7 +36,7 @@ This repository contains the code and data pipeline used in the paper *"Machine-
 
 Phytosociological classification assigns vegetation plots (relevés) to hierarchical syntaxonomic units based on their floristic composition. This process is traditionally performed by expert botanists through manual comparison with reference descriptions. In this work, we explore the use of supervised machine learning to automate the assignment of Pyrenean vegetation relevés to phytosociological alliances.
 
-Each relevé is represented as a numerical vector encoding the abundance of 3,700 plant species. Three classification models are trained and evaluated:
+Each relevé is represented as a numerical vector encoding the abundance of 3,760 plant species. Three classification models are trained and evaluated:
 
 | Model | Description |
 |-------|-------------|
@@ -87,7 +87,7 @@ The primary input file (`output_pirineus_3_corrected.txt`) is a JSON dictionary 
 
 - **Key**: Unique relevé identifier (e.g., `"P-P00123"`)
 - **Value**: A list containing:
-  - A numerical vector of length 3,700 representing species abundances (values 0–9, following the Braun-Blanquet abundance-dominance scale transformed to ordinal values)
+  - A numerical vector of length 3,760 representing species abundances (values 0–9, following the Braun-Blanquet abundance-dominance scale transformed to ordinal values)
   - The assigned phytosociological alliance label (e.g., `["L345"]`)
 
 ### Species Index Dictionary
@@ -127,7 +127,7 @@ All three training notebooks follow a consistent pipeline:
 
 ### MLP-Specific: Autoencoder Dimensionality Reduction
 
-The MLP notebook includes an additional step where an autoencoder compresses the 3,700-dimensional input into a 500-dimensional representation before classification. This helps the neural network learn more efficiently from the sparse, high-dimensional input.
+The MLP notebook includes an additional step where an autoencoder compresses the 3,760-dimensional input into a 500-dimensional representation before classification. This helps the neural network learn more efficiently from the sparse, high-dimensional input.
 
 ### Hyperparameter Spaces
 
